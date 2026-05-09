@@ -1,4 +1,5 @@
 # fuzzy matching of completions for when you mistype them
+
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
@@ -17,11 +18,16 @@ autoload -Uz compinit
 compinit
 
 # brew
-eval "$($HOMEBREW_PREFIX/bin/brew shellenv zsh)"
+if [[ $OSTYPE == "linux-gnu"* ]]; then
+	export MY_HOMEREW_PREFIX=/home/linuxbrew/.linuxbrew
+elif [[ $OSTYPE == "darwin"* ]]; then
+	export MY_HOMEREW_PREFIX=/opt/homebrew
+fi
+eval "$($MY_HOMEBREW_PREFIX/bin/brew shellenv zsh)"
 
 # start the starship prompt
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$($HOMEBREW_PREFIX/bin/starship init zsh)"
+eval "$($MY_HOMEBREW_PREFIX/bin/starship init zsh)"
 
 # aliases
 [ -f "$HOME/.config/zsh/aliases.zsh" ] && source "$HOME/.config/zsh/aliases.zsh"
