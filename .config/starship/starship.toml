@@ -1,0 +1,39 @@
+# add a newline between prompts
+add_newline = true
+
+# allow external commmands to run for this much ms before starship terminates them
+command_timeout = 1000
+
+# modify the format string for the prompt
+format = """
+$directory\
+$fill\
+$cpp\
+$cmake\
+$python\
+${custom.latex}\
+$battery\
+$line_break\
+$character"""
+
+# custom home module
+# [custom.home]
+# when = "test $HOME = $PWD"
+# format = "You are home"
+
+# custom LaTeX module
+[custom.latex]
+detect_extensions = ["tex"]
+style = "bold red"
+symbol = "LaTeX"
+format = "[$symbol]($style)"
+
+# adjust the behaviour of the fill module
+[fill]
+
+symbol = " "
+
+# adjust the behaviour of the cpp module
+[cpp]
+
+disabled = false
