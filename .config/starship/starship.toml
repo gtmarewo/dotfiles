@@ -13,6 +13,8 @@ $cmake\
 $python\
 ${custom.latex}\
 $battery\
+$git_branch\
+$git_status\
 $line_break\
 $character"""
 
