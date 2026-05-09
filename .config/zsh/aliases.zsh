@@ -6,7 +6,7 @@ alias bi='brew install'
 alias br='brew remove'
 alias bs='brew search'
 
-alias ls='ls --color'
+alias ls='eza'
 
 alias ..='cd ..'
 alias ...='cd ../..'
