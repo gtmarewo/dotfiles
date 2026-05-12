@@ -31,6 +31,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	[[ -d "/Applications/VisIt.app" ]] && alias visit="/Applications/VisIt.app/Contents/Resources/bin/visit"
-	[[ "$(which paraview)" == *"Paraview"* ]] && alias paraview="/Applications/Paraview-6.1.0.app/Contents/MacOS/paraview"
-	[[ -d "/Applications/Visual Studio Code.app" ]] && alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Code'
+	[[ "$(which paraview)" == *"Paraview"* ]] && \
+	alias paraview="/Applications/Paraview-6.1.0.app/Contents/MacOS/paraview"
+	[[ -d "/Applications/Visual Studio Code.app" ]] && \
+	alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Code'
 fi
