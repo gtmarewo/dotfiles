@@ -18,12 +18,12 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	[[ -f /opt/visit3_4_2/bin/visit ]] && alias visit='/opt/visit3_4_2/bin/visit' 
 	# Linux distribution specific aliases
 	export LSB_DISTRIBUTOR=$(lsb_release -i)
-	if [[ "$DISTRIBUTOR" == *"Fedora"* ]]; then
+	if [[ "$LSB_DISTRIBUTOR" == *"Fedora"* ]]; then
 		alias sdc="dnf check-update"
 		alias sdu="sudo dnf upgrade"
 		alias sdi="sudo dnf install"
 		alias sdr="sudo dnf remove"
-	elif [[ "$DISTRIBUTOR" == *"Ubuntu"* ]]; then
+	elif [[ "$LSB_DISTRIBUTOR" == *"Ubuntu"* ]]; then
 		alias sac="sudo apt update"
 		alias sau="sudo apt upgrade"
 		alias sai="sudo apt install"
