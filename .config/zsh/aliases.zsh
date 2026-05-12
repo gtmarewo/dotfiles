@@ -16,7 +16,7 @@ alias ....='cd ../../..'
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	[[ -f /opt/visit3_4_2/bin/visit ]] && alias visit='/opt/visit3_4_2/bin/visit' 
-	# Linux distribution specific aliases
+	# Linux distribution specific aliases: corrected on May 12 at 09:14
 	export LSB_DISTRIBUTOR=$(lsb_release -i)
 	if [[ "$LSB_DISTRIBUTOR" == *"Fedora"* ]]; then
 		alias sdc="dnf check-update"
