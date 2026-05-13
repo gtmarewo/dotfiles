@@ -2,7 +2,7 @@
 
 if [[ "$(which brew)" == *"brew" ]]; then
 	alias bd='brew update'
-	alias bg='brew upgrade'
+	alias bG='brew upgrade'
 	alias bi='brew install'
 	alias br='brew remove'
 	alias bs='brew search'
@@ -22,10 +22,10 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	export LSB_DISTRIBUTOR=$(lsb_release -i)
 	if [[ "$LSB_DISTRIBUTOR" == *"Fedora"* ]]; then
 		alias dc="dnf check-update"
-		alias du="sudo dnf upgrade"
+		alias dU="sudo dnf upgrade"
 		alias di="sudo dnf install"
 		alias dr="sudo dnf remove"
-		alias sdr="dnf search"
+		alias dr="dnf search"
 	elif [[ "$LSB_DISTRIBUTOR" == *"Ubuntu"* ]]; then
 		alias ad="sudo apt update"
 		alias au="sudo apt upgrade"
