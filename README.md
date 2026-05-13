@@ -1,6 +1,6 @@
 # dotfiles
 
-My configuration for zsh to work in harmony with starship, starship, stow, git etc.
+My configuration for zsh to work in harmony with brew, starship, stow, git etc.
 
 # Desciption
 
