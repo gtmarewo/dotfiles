@@ -1,12 +1,15 @@
 # dotfiles
 
-My configuration for zsh to work in harmony with brew, starship, stow, git etc.
+Configure zsh - brew - starship - stow - git toolchain.
 
 # Desciption
 
-* zsh (z-shell) is a Unix command interpreter (shell) that first appeared 1 year after BASH (Bourne again shell) came out.
-  * zsh works pretty much like BASH with a bunch of extra features, e.g, changing into a directory without typing `cd', programmable command completion, a history mechanism and many other features.
+* _zsh_ (z-shell) is a Unix command interpreter (shell).
+  * zsh is like _BASH_ with more features, e.g, changing into a directory without typing `cd', programmable command completion, a history mechanism.
   * zsh is the default shell on macOS.
-  * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. zsh can be set as a new shell with the command `chsh -s /bin/zsh'.
-  * The functionality of zsh can be extended by installing plugins such as `zsh-vi-mode' for editing the command line using the powerful text-baed tex editor Vim.
-* starship is a minimal, fast and highly customisable command prompt for any shell such as zsh.
+  * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. 
+  * The command `chsh -s /bin/zsh` sets zsh as the new login shell.
+  * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
+* _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
+* _stow_
+* _git_
