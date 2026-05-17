@@ -33,7 +33,7 @@ Configure your zsh - brew - starship - stow toolchain.
 
 `brew install stow`
 
-### The zsh-brew-starship-stow toolchain
+### The brew-starship-stow toolchain
 
 ```
 cd
