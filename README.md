@@ -6,7 +6,7 @@ Configure your zsh - brew - starship - stow toolchain.
 
 * _zsh_ (z-shell) is a Unix command interpreter (shell).
   * zsh is like _BASH_ with more features, e.g, 
-    * changing into a directory without typing `cd',
+    * changing into a directory without typing `cd`,
     * programmable command completion, 
     * a history mechanism.
   * zsh is the default shell on macOS.
