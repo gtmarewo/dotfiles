@@ -1,6 +1,6 @@
 # dotfiles
 
-Configure zsh - brew - starship - stow - git toolchain.
+Configure your zsh - brew - starship - stow toolchain.
 
 ## Description
 
@@ -18,7 +18,6 @@ Configure zsh - brew - starship - stow - git toolchain.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
 * _stow_
-* _git_
 
 ## Installation
 
@@ -33,3 +32,12 @@ Configure zsh - brew - starship - stow - git toolchain.
 ### stow
 
 `brew install stow`
+
+### The zsh-brew-starship-stow toolchain
+
+```
+cd
+git clone https://github.com/gtmarewo/dotfiles.git
+cd dotfiles
+stow .
+```
