@@ -17,7 +17,7 @@ Configure your zsh - brew - starship - stow toolchain.
 * _brew_ is dubbed the _missing package manager_ for macOS.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
-* _stow_
+* _stow_ is a symlink farm manager.
 
 ## Installation
 
