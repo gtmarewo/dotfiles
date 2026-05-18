@@ -29,7 +29,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 		alias dU="sudo dnf upgrade"
 		alias di="sudo dnf install"
 		alias dr="sudo dnf remove"
-		alias dr="dnf search"
+		alias ds="dnf search"
 	elif [[ "$LSB_DISTRIBUTOR" == *"Ubuntu"* ]]; then
 		alias ad="sudo apt update"
 		alias au="sudo apt upgrade"
