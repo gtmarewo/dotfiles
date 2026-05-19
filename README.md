@@ -33,11 +33,14 @@ Configure your zsh - brew - starship - stow toolchain.
 
 `brew install stow`
 
-### The brew-starship-stow toolchain
+## Configuration
 
 ```
-cd
-git clone https://github.com/gtmarewo/dotfiles.git
-cd dotfiles
+export NOW=$(date "+%Y%m%d%H%M")
+[[ -f ~/.zshrc ]] && mv -v ~/.zshrc ~/.zshrc.$NOW
+[[ -d ~/.config/starship ]] && mv -v ~/.config/starship ~/.config/starship.$NOW
+[[ -d ~/.config/zsh ]] && mv -v ~/.config/zsh ~/.config/zsh.$NOW
+git clone https://github.com/gtmarewo/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 stow .
 ```
