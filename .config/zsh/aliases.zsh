@@ -8,7 +8,7 @@ if [[ "$(which brew)" == *"brew" ]]; then
 	alias bs='brew search'
 fi
 
-[[ -f "$(which eza)" ]] && alias ls=eza
+[[ -f "$(which eza)" ]] && alias ls="eza --icons=always"
 
 alias ..='cd ..'
 alias ...='cd ../..'
