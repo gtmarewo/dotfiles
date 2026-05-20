@@ -21,6 +21,16 @@ Configure your zsh - brew - starship - stow toolchain.
 
 ## Installation
 
+### zsh
+
+```
+if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
+  [[ -f /usr/bin/zsh ]] || sudo dnf install zsh
+elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
+  [[ -f /usr/bin/zsh ]] || sudo apt install zsh
+fi
+```
+
 ### brew
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
