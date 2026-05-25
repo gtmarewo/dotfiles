@@ -18,6 +18,7 @@ Configure your zsh - brew - starship - stow toolchain.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
 * _stow_ is a symlink farm manager.
+* _wezter_ is a cross-platform terminal emulator.
 
 ## Installation
 
