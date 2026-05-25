@@ -17,6 +17,12 @@ setopt autocd
 autoload -Uz compinit
 compinit
 
+# history mechanism
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+setopt share_history
+
 # brew
 if [[ $OSTYPE == "linux-gnu"* ]]; then
 	export MY_HOMEREW_PREFIX=/home/linuxbrew/.linuxbrew
@@ -42,3 +48,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     export DEAL_II_CONF_SILENT=ON
     . /Applications/deal.II.app/Contents/MacOS/dealii.conf
 fi
+
+export PATH=$PATH:$HOME/.local/bin

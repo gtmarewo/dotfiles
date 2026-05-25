@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- Choose Nerd Font
 config.font = wezterm.font("CaskaydiaMono Nerd Font")
-config.font_size = 16
+config.font_size = 11
 
 -- Remove the tab bar
 config.enable_tab_bar = false
