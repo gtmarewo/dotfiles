@@ -23,17 +23,12 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt share_history
 
-# brew
-if [[ $OSTYPE == "linux-gnu"* ]]; then
-	export MY_HOMEREW_PREFIX=/home/linuxbrew/.linuxbrew
-elif [[ $OSTYPE == "darwin"* ]]; then
-	export MY_HOMEREW_PREFIX=/opt/homebrew
-fi
-eval "$($MY_HOMEBREW_PREFIX/bin/brew shellenv zsh)"
+# initialise brew in the zsh shell
+eval "$($(brew --prefix)/bin/brew shellenv zsh)"
 
-# start the starship prompt
+# initialise the starship prompt in zsh
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$($MY_HOMEBREW_PREFIX/bin/starship init zsh)"
+eval "$($(brew --prefix)/bin/starship init zsh)"
 
 # aliases
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
