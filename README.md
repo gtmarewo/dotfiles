@@ -36,7 +36,7 @@ fi
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-### wezterm
+### wezterm 
 ```
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 [[ "$(cat /etc/os-release)" == *"Fedora"* ]] && sudo dnf copr enable wezfurlong/wezterm-nightly && sudo dnf install wezterm
