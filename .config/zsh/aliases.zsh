@@ -6,6 +6,7 @@ alias gad='git add'
 alias gct='git commit'
 alias gpl='git pull'
 alias gph='git push'
+alias gbh='git branch'
 
 if [[ "$(which brew)" == *"brew" ]]; then
 	alias bd='brew update'
