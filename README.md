@@ -76,3 +76,7 @@ git clone https://github.com/gtmarewo/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow .
 ```
+
+## Authors
+
+Gerald Marewo <gtmarewo@gmail.com>
