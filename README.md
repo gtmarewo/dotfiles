@@ -41,8 +41,11 @@ fi
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 [[ "$(cat /etc/os-release)" == *"Fedora"* ]] && sudo dnf copr enable wezfurlong/wezterm-nightly && sudo dnf install wezterm
 [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install wezterm
-[[]]
 ```
+
+### zsh plugins
+
+`brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use`
 
 ### starship
 
