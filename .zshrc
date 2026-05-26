@@ -26,7 +26,7 @@ setopt share_history
 # initialise brew in the zsh shell
 
 [[ "$OSTYPE" == *"linux-gnu"* ]] && export MY_BREW_PREFIX=/home/linuxbrew/.linuxbrew
-[[ "$OSTYPE" == *"darwin"* ]] && export MY_BREW_PREFIX=/opt/linuxbrew/
+[[ "$OSTYPE" == *"darwin"* ]] && export MY_BREW_PREFIX=/opt/homebrew
 eval "$($MY_BREW_PREFIX/bin/brew shellenv zsh)"
 
 # initialise the starship prompt in zsh
