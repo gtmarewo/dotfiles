@@ -1,5 +1,12 @@
 # common aliases
 
+alias gs='git status'
+alias gt='git switch'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git pull'
+alias gq='git push'
+
 if [[ "$(which brew)" == *"brew" ]]; then
 	alias bd='brew update'
 	alias bG='brew upgrade'
