@@ -44,16 +44,21 @@ fi
 ```
 
 ### zsh plugins
-
-`brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use`
+```
+brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
+```
 
 ### starship
 
-`brew install starship`
+```
+brew install starship
+```
 
 ### stow
 
-`brew install stow`
+```
+brew install stow
+```
 
 ## Configuration
 
