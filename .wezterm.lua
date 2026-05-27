@@ -1,10 +1,17 @@
--- Import the wezterm module
+-- Pull in the wezterm API
 local wezterm = require("wezterm")
 
--- Store the config_builder in a table called config
+-- The following 'table' named config will hold the configuration.
+-- A table is the only data structure in lua.
+-- Here the table acts as an associative array.
+-- It holds key - value pairs.
+-- In lua variables are global unless marked local.
+-- A local variable is only accessible within a block or scope.
 local config = wezterm.config_builder()
 
--- Choose Nerd Font
+-- Apply config choices
+
+-- Choose a Nerd Font and it's size to view icons in the terminal
 config.font = wezterm.font("CaskaydiaMono Nerd Font")
 config.font_size = 12
 
@@ -17,4 +24,5 @@ config.window_decorations = "TITLE"
 -- Enable window background opacity
 config.window_background_opacity = 0.8
 
+-- retrun the configuration to wezterm
 return config
