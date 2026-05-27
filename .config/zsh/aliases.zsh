@@ -2,11 +2,11 @@
 
 alias st='git status'
 alias sw='git switch'
-alias ad=='git add'
-alias ci=='git commit'
+alias ad='git add'
+alias ci='git commit'
 alias pl='git pull'
 alias ps='git push'
-alias br=='git branch'
+alias bc='git branch'
 
 if [[ "$(which brew)" == *"brew" ]]; then
 	alias bd='brew update'
