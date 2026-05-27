@@ -5,7 +5,7 @@ alias sw='git switch'
 alias ad='git add'
 alias ci='git commit'
 alias pl='git pull'
-alias ps='git push'
+alias ph='git push'
 alias bc='git branch'
 
 if [[ "$(which brew)" == *"brew" ]]; then
