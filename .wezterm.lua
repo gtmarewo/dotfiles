@@ -24,5 +24,5 @@ config.window_decorations = "TITLE"
 -- Enable window background opacity
 config.window_background_opacity = 0.8
 
--- retrun the configuration to wezterm
+-- return the configuration to wezterm
 return config
