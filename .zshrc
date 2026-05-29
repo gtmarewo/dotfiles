@@ -33,6 +33,9 @@ eval "$($MY_BREW_PREFIX/bin/brew shellenv zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$($MY_BREW_PREFIX/bin/starship init zsh)"
 
+# set up fzf key bindings and fuzzy completions
+source <(fzf --zsh)
+
 # aliases
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
 
