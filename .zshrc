@@ -51,3 +51,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 export PATH=$PATH:$HOME/.local/bin
+export EDITOR=/usr/bin/vim
