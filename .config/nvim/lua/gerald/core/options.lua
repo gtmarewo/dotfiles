@@ -21,7 +21,7 @@ opt.background = "dark"		        -- dark mode
 local cmd = vim.cmd             	-- a shortcut for vim.cmd
 
 cmd("let g:netrw_liststyle = 3")	-- tree view from the nvim file explorer
-cmd("let g:netrw_liststyle = 3")    	-- tree view from the file explorer
+cmd("let g:netrw_liststyle = 3")    -- tree view from the file explorer
 
 -- Make backgrounds transparent
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
