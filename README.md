@@ -1,6 +1,6 @@
 # dotfiles
 
-Configure your zsh - brew - wezterm - starship - stow toolchain.
+Configure your zsh - brew - wezterm - starship - nvim - stow toolchain.
 
 ## Description
 
@@ -18,6 +18,7 @@ Configure your zsh - brew - wezterm - starship - stow toolchain.
 * _wezterm_ is a cross-platform terminal emulator.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
+* _nvim_ is a text editor based on _vim_.
 * _stow_ is a symlink farm manager.
 
 ## Installation
@@ -58,6 +59,11 @@ brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh
 brew install starship
 ```
 
+### nvim
+```
+brew install neovim
+```
+
 ### stow
 
 ```
@@ -71,6 +77,7 @@ export NOW=$(date "+%Y%m%d%H%M")
 [[ -f ~/.zshrc ]] && mv -v ~/.zshrc ~/.zshrc.$NOW
 [[ -f ~/.wezterm.lua ]] && mv -v ~/.wezterm.lua ~/.wezterm.lua.$NOW
 [[ -d ~/.config/starship ]] && mv -v ~/.config/starship ~/.config/starship.$NOW
+[[ -d ~/.config/nvim ]] && mv -v ~/.config/nvim ~/.config/nvim.$NOW
 [[ -d ~/.config/zsh ]] && mv -v ~/.config/zsh ~/.config/zsh.$NOW
 git clone https://github.com/gtmarewo/dotfiles.git ~/dotfiles
 cd ~/dotfiles
