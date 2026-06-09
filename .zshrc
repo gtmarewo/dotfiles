@@ -36,6 +36,9 @@ eval "$($MY_BREW_PREFIX/bin/starship init zsh)"
 # set up fzf key bindings and fuzzy completions
 source <(fzf --zsh)
 
+# zoxide
+eval "$(zoxide init zsh --cmd cd)"
+
 # aliases
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
 

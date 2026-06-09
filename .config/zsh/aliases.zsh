@@ -18,6 +18,8 @@ fi
 
 [[ -f "$(which eza)" ]] && alias ls="eza --icons=always" && alias la="ls -la"
 
+# [[ -f "$(which z)" ]]
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
