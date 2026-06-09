@@ -1,6 +1,6 @@
 # dotfiles
 
-Configure your zsh - brew - wezterm - starship - nvim - stow toolchain.
+Configure your zsh - brew - wezterm - starship - nvim - zoxide - stow toolchain.
 
 ## Description
 
@@ -19,6 +19,7 @@ Configure your zsh - brew - wezterm - starship - nvim - stow toolchain.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
 * _nvim_ is a text editor based on _vim_.
+* _zoxide_ a smarter cd command.
 * _stow_ is a symlink farm manager.
 
 ## Installation
@@ -62,6 +63,11 @@ brew install starship
 ### nvim
 ```
 brew install neovim
+```
+
+### zoxide
+```
+brew install zoxide
 ```
 
 ### stow
