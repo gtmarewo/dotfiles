@@ -11,7 +11,6 @@ Configure your zsh - brew - wezterm - starship - nvim - zoxide - stow toolchain.
     * a history mechanism.
   * zsh is the default shell on macOS.
   * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. 
-  * The command `chsh -s /bin/zsh` sets zsh as the new login shell.
   * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
@@ -28,15 +27,18 @@ Configure your zsh - brew - wezterm - starship - nvim - zoxide - stow toolchain.
 
 ```
 if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
-  [[ -f /usr/bin/zsh ]] || sudo dnf install zsh
+  [[ -f /usr/bin/zsh ]] || dnf check-update && sudo dnf install zsh
+  chsh -s $(which zsh)
 elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
-  [[ -f /usr/bin/zsh ]] || sudo apt install zsh
+  [[ -f /usr/bin/zsh ]] || sudo apt update && sudo apt install zsh
+  chsh -s $(which zsh)
 fi
 ```
 
 ### brew
 
 ```
+[[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install curl
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
