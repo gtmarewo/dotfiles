@@ -18,7 +18,7 @@ Configure your zsh - brew - wezterm - starship - nvim - zoxide - stow toolchain.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
 * _nvim_ is a text editor based on _vim_.
-* _zoxide_ a smarter cd command.
+* _zoxide_ a smarter `cd` command.
 * _stow_ is a symlink farm manager.
 
 ## Installation
@@ -47,7 +47,10 @@ fi
 ```
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 [[ "$(cat /etc/os-release)" == *"Fedora"* ]] && sudo dnf copr enable wezfurlong/wezterm-nightly && sudo dnf install wezterm
-[[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install wezterm
+if [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
+  # add apt repository then install using apt: TODO
+  sudo apt update && sudo apt install wezterm
+fi
 ```
 
 ### zsh plugins
