@@ -46,9 +46,15 @@ fi
 
 ```
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
-[[ "$(cat /etc/os-release)" == *"Fedora"* ]] && sudo dnf copr enable wezfurlong/wezterm-nightly && sudo dnf install wezterm
+if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
+  sudo dnf copr enable wezfurlong/wezterm-nightly
+  sudo dnf install wezterm
+fi
 if [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
-  # add apt repository then install using apt: TODO
+  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | \
+  sudo tee /etc/apt/sources.list.d/wezterm.list
+  sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
   sudo apt update && sudo apt install wezterm
 fi
 ```
