@@ -1,6 +1,6 @@
 # dotfiles
 
-Configure your zsh - brew - fzf - fd - wezterm - starship - nvim - zoxide - stow toolchain.
+Configure your zsh - brew - fzf - fd - tmux - wezterm - starship - nvim - zoxide - stow toolchain.
 
 ## Description
 
@@ -43,10 +43,10 @@ fi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### fzf, fd and wezterm (needs a nerd-font) 
+### fzf, fd, tmux and wezterm (needs a nerd-font) 
 
 ```
-brew install fzf fd font-caskaydia-mono-nerd-font
+brew install fzf fd tmux font-caskaydia-mono-nerd-font
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
   sudo dnf copr enable wezfurlong/wezterm-nightly
