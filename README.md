@@ -11,7 +11,6 @@ Configure your zsh - brew - fzf - wezterm - starship - nvim - zoxide - stow tool
     * a history mechanism.
   * zsh is the default shell on macOS.
   * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. 
-  * The command `chsh -s /bin/zsh` sets zsh as the new login shell.
   * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
@@ -20,7 +19,7 @@ Configure your zsh - brew - fzf - wezterm - starship - nvim - zoxide - stow tool
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
 * _nvim_ is a text editor based on _vim_.
-* _zoxide_ a smarter cd command.
+* _zoxide_ a smarter `cd` command.
 * _stow_ is a symlink farm manager.
 
 ## Installation
@@ -29,15 +28,18 @@ Configure your zsh - brew - fzf - wezterm - starship - nvim - zoxide - stow tool
 
 ```
 if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
-  [[ -f /usr/bin/zsh ]] || sudo dnf install zsh
+  [[ -f /usr/bin/zsh ]] || dnf check-update && sudo dnf install zsh
+  chsh -s $(which zsh)
 elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
-  [[ -f /usr/bin/zsh ]] || sudo apt install zsh
+  [[ -f /usr/bin/zsh ]] || sudo apt update && sudo apt install zsh
+  chsh -s $(which zsh)
 fi
 ```
 
 ### brew
 
 ```
+[[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install curl
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -46,8 +48,16 @@ fi
 ```
 brew install fzf font-caskaydia-mono-nerd-font
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
-[[ "$(cat /etc/os-release)" == *"Fedora"* ]] && sudo dnf copr enable wezfurlong/wezterm-nightly && sudo dnf install wezterm
-[[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install wezterm
+if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
+  sudo dnf copr enable wezfurlong/wezterm-nightly
+  sudo dnf install wezterm
+elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
+  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | \
+  sudo tee /etc/apt/sources.list.d/wezterm.list
+  sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+  sudo apt update && sudo apt install wezterm
+fi
 ```
 
 ### zsh plugins
