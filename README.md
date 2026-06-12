@@ -15,6 +15,8 @@ Configure your zsh - brew - fzf - fd - tmux - wezterm - starship - nvim - zoxide
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
 * _fzf_ is a fuzzy finder for files.
+* _fd_ is a simple, user-friendly alternative to `find`.
+* -tmux_ is terminal multiplexer.
 * _wezterm_ is a cross-platform terminal emulator.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
