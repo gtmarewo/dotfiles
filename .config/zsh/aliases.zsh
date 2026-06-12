@@ -8,6 +8,9 @@ alias pl='git pull'
 alias ph='git push'
 alias bc='git branch'
 
+alias bat='bat --color=always'
+alias cat='bat'
+
 if [[ "$(which brew)" == *"brew" ]]; then
 	alias bd='brew update'
 	alias bG='brew upgrade'
