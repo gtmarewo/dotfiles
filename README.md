@@ -1,6 +1,6 @@
 # dotfiles
 
-Configure your zsh - brew - fzf - fd - tmux - wezterm - starship - nvim - zoxide - stow toolchain.
+Make a nectarous command line.
 
 ## Description
 
