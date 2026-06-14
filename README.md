@@ -19,6 +19,7 @@ Make a nectarous command line.
 * _tmux_ is terminal multiplexer.
 * _bat_ is a `cat` clone with syntax highlighting  and git integration.
 * _eza_ is a mordern replacement for `ls`.
+* _yazi_ is a terminal file manager.
 * _wezterm_ is a cross-platform terminal emulator.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
   * The default configuration file for starship is `~/.config/starship.toml`.
@@ -47,10 +48,10 @@ fi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### fzf, fd, tmux and wezterm (needs a nerd-font) 
+### fzf, fd, tmux, bat, eza, yazi and wezterm (needs a nerd-font) 
 
 ```
-brew install fzf fd tmux bat eza font-caskaydia-mono-nerd-font
+brew install fzf fd tmux bat eza yazi font-caskaydia-mono-nerd-font
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
   sudo dnf copr enable wezfurlong/wezterm-nightly
