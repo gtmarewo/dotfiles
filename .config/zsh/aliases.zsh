@@ -44,7 +44,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 		alias dr="sudo dnf remove"
 		alias ds="dnf search"
 	elif [[ "$LSB_DISTRIBUTOR" == *"Ubuntu"* ]]; then
-		alias ad="sudo apt update"
+		alias aD="sudo apt update"
 		alias au="sudo apt upgrade"
 		alias ai="sudo apt install"
 		alias ar="sudo apt remove"

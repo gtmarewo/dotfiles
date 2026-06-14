@@ -14,7 +14,7 @@ Make a nectarous command line.
   * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
-* _fzf_ is a fuzzy finder for files.
+* _fzf_ is a command-line fuzzy finder.
 * _fd_ is a simple, user-friendly alternative to `find`.
 * _tmux_ is terminal multiplexer.
 * _bat_ is a `cat` clone with syntax highlighting  and git integration.
