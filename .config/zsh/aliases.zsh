@@ -21,7 +21,11 @@ fi
 
 [[ -f "$(which eza)" ]] && alias ls="eza --icons=always" && alias la="ls -la"
 
-# [[ -f "$(which z)" ]]
+if [[ -f "$(which fzf)" && -f "$(which nvim)" ]]; then
+  alias invim="fzf -m --preview='bat --color=always {}' | xargs nvim"
+fi
+
+[[ -f "$(which bat)" ]] && alias bat='bat --color=always'
 
 alias ..='cd ..'
 alias ...='cd ../..'
