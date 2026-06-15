@@ -31,5 +31,7 @@ config.initial_rows = 30
 -- Disable the "Are you sure you want to quit/close?" prompt
 config.window_close_confirmation = 'NeverPrompt'
 
+-- Choose a color scheme
+config.color_scheme = 'Catppuccin Macchiato'
 -- return the configuration to wezterm
 return config
