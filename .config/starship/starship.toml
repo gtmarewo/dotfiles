@@ -2,7 +2,7 @@
 add_newline = true
 
 # allow external commmands to run for this much ms before starship terminates them
-command_timeout = 1000
+command_timeout = 2000
 
 # modify the format string for the prompt
 format = """
