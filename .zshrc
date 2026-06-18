@@ -54,7 +54,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 export PATH=$PATH:$HOME/.local/bin
-export EDITOR=/usr/bin/vim
+export EDITOR="nvim"
 
 # a shell wrapper that provides the ability to change the current working directory when exiting Yazi
 function y() {
