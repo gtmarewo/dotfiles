@@ -1,11 +1,24 @@
-return {
-  "folker/tokyonight.vim",
-  priority = 1000,
-  config = function ()
-    require("tokyonight").setup({
-      style = "night"
-    })
+-- Add the catppuccin colors cheme from the given source by
+-- calling a function with a single table as the argument
+vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
-    vim.cmd("colorscheme tokyonight")
-  end
-}
+-- Change the default options and settings
+require("catppuccin").setup({
+  flavour = "auto",       -- latte, freppe, macchiato, mocha
+  background = {
+    light = "latte",      -- in light mode 
+    dark  = "macchiato",  -- in dark mode
+  },
+})
+
+-- Load the catppuccin color scheme
+vim.cmd("colorscheme catppuccin")
+
+-- Add the lualine plugin
+vim.pack.add({
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-lualine/lualine.nvim'
+})
+
+-- Start lualine
+require('lualine').setup()
