@@ -21,4 +21,12 @@ vim.pack.add({
 })
 
 -- Start lualine
-require('lualine').setup()
+-- require('lualine').setup()
+require('lualine').setup({
+  options = {
+    -- Use specific rounded characters for the outer edges
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+  }
+})
+
