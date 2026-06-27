@@ -33,5 +33,31 @@ config.window_close_confirmation = 'NeverPrompt'
 
 -- Choose a color scheme
 config.color_scheme = 'Catppuccin Macchiato'
+
+-- Define the leader key as Tab
+config.leader = { key = 'Tab', mods = 'NONE', timeout_milliseconds = 1000 }
+
+config.keys = {
+  -- 2. Allow sending an actual Tab by pressing Tab twice
+  {
+    key = 'Tab',
+    mods = 'LEADER',
+    action = wezterm.action.SendKey { key = 'Tab' },
+  },
+  
+  -- LEADER + v to split vertically
+  {
+    key = 'v',
+    mods = 'LEADER',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  -- LEADER + h to split horizontally
+  {
+    key = 'h',
+    mods = 'LEADER',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+}
+
 -- return the configuration to wezterm
 return config
