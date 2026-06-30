@@ -14,17 +14,17 @@ Make a nectarous command line.
   * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
-* _fzf_ is a command-line fuzzy finder.
-* _fd_ is a simple, user-friendly alternative to `find`.
-* _tmux_ is terminal multiplexer.
-* _bat_ is a `cat` clone with syntax highlighting  and git integration.
-* _eza_ is a mordern replacement for `ls`.
-* _yazi_ is a terminal file manager.
-* _wezterm_ is a cross-platform terminal emulator.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
-  * The default configuration file for starship is `~/.config/starship.toml`.
 * _neovim_ is a text editor based on _vim_.
-* _zoxide_ a smarter `cd` command.
+* _wezterm_ is a cross-platform terminal emulator.
+  * The default configuration file for starship is `~/.config/starship.toml`.
+* _yazi_ is a terminal file manager whose functionality can be extended by installing the following.
+  * _zoxide_ a smarter `cd` command.
+  * _fzf_ is a command-line fuzzy finder.
+  * _fd_ is a simple, user-friendly alternative to `find`.
+  * _bat_ is a `cat` clone with syntax highlighting  and git integration.
+  * _eza_ is a mordern replacement for `ls`.
+* _tmux_ is a terminal multiplexer.
 * _stow_ is a symlink farm manager.
 
 ## Installation
@@ -41,6 +41,12 @@ elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
 fi
 ```
 
+### zsh plugins
+
+```
+brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
+```
+
 ### brew
 
 ```
@@ -48,10 +54,20 @@ fi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### fzf, fd, tmux, bat, eza, yazi and wezterm (needs a nerd-font) 
+### starship
 
 ```
-brew install fzf fd tmux bat eza yazi font-caskaydia-mono-nerd-font
+brew install starship
+```
+
+### neovim
+```
+brew install neovim
+```
+
+### wezterm (needs a nerd-font) 
+```
+brew install font-caskaydia-mono-nerd-font
 [[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
 if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
   sudo dnf copr enable wezfurlong/wezterm-nightly
@@ -65,26 +81,15 @@ elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
 fi
 ```
 
-### zsh plugins
+### yazi (optionally with zoxide, fzf, fd, bat and eza for extra functionality)
 
 ```
-brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
+brew install yazi zoxide fzf fd bat eza
 ```
 
-### starship
-
+### tmux
 ```
-brew install starship
-```
-
-### nvim
-```
-brew install neovim
-```
-
-### zoxide
-```
-brew install zoxide
+brew install tmux
 ```
 
 ### stow
