@@ -39,12 +39,7 @@ elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
   [[ -f /usr/bin/zsh ]] || sudo apt update && sudo apt install zsh
   chsh -s $(which zsh)
 fi
-```
-
-### zsh plugins
-
-```
-brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
+# Logout for changes to take effect.
 ```
 
 ### brew
@@ -52,6 +47,12 @@ brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh
 ```
 [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install curl
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### zsh plugins
+
+```
+brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
 ```
 
 ### starship
