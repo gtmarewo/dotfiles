@@ -25,8 +25,8 @@ config.window_decorations = "TITLE"
 config.window_background_opacity = 0.8
 
 -- Set the default width and height for a new wezterm window
-config.initial_cols = 100
-config.initial_rows = 32
+config.initial_cols = 80
+config.initial_rows = 28
 
 -- Disable the "Are you sure you want to quit/close?" prompt
 config.window_close_confirmation = 'NeverPrompt'
