@@ -18,6 +18,8 @@ opt.smartcase = true		        -- assume case sensitive is wanted if mixed case s
 opt.termguicolors = true	        -- allow for a wider range of colors
 opt.background = "dark"		        -- dark mode
 
+opt.textwidth = 72                  -- wrap line after this many columns
+
 local cmd = vim.cmd             	-- a shortcut for vim.cmd
 
 cmd("let g:netrw_liststyle = 3")	-- tree view from the nvim file explorer
