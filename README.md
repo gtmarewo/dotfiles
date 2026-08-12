@@ -26,7 +26,7 @@ Make a nectarous command line.
   * _eza_ is a mordern replacement for `ls`.
 * _tmux_ is a terminal multiplexer.
 * _stow_ is a symlink farm manager.
-* _htop_ is an interactive process viewwer.
+* _htop_ is an interactive process viewer.
 * _ncdu_ is an ncurses based disk usage viewer.
 
 ## Installation
