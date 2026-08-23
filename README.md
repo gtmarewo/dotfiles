@@ -4,6 +4,8 @@ Make a nectarous command line.
 
 ## Description
 
+The following command line tools are indespensible.
+
 * _zsh_ (z-shell) is a Unix command interpreter (shell).
   * zsh is like _BASH_ with more features, e.g, 
     * changing into a directory without typing `cd`,
@@ -15,9 +17,9 @@ Make a nectarous command line.
   * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
+  * The default configuration file for starship is `~/.config/starship.toml`.
 * _neovim_ is a text editor based on _vim_.
 * _wezterm_ is a cross-platform terminal emulator.
-  * The default configuration file for starship is `~/.config/starship.toml`.
 * _yazi_ is a terminal file manager whose functionality can be extended by installing the following.
   * _zoxide_ a smarter `cd` command.
   * _fzf_ is a command-line fuzzy finder.
