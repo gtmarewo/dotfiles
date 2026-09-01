@@ -30,7 +30,7 @@ The following command line tools are indespensible.
 * _stow_ is a symlink farm manager.
 * _htop_ is an interactive process viewer.
 * _ncdu_ is an ncurses based disk usage viewer.
-* _kew_ is dubbed _music for the shell_. This is a terminal music
+* _kew_ is dubbed _music for the shell_. This is a command line music
   player.
 
 ## Installation
@@ -105,9 +105,9 @@ brew install tmux
 brew install stow
 ```
 
-### htop and ncdu
+### htop, ncdu anda kew
 ```
-brew install htop ncdu
+brew install htop ncdu kew
 ```
 
 ## Configuration
