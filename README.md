@@ -30,6 +30,8 @@ The following command line tools are indespensible.
 * _stow_ is a symlink farm manager.
 * _htop_ is an interactive process viewer.
 * _ncdu_ is an ncurses based disk usage viewer.
+* _kew_ is dubbed _music for the shell_. This is a terminal music
+  player.
 
 ## Installation
 
