@@ -1,23 +1,21 @@
 # dotfiles
 
-Make a nectarous command line.
+Command line tools I cannot live without.
 
 ## Description
 
-The following command line tools are indespensible.
+I find the following command line tools are indespensible.
 
-* _zsh_ (z-shell) is a Unix command interpreter (shell).
-  * zsh is like _BASH_ with more features, e.g, 
+* _zsh_ (z-shell) is an immersive Unix command interpreter (shell)
+  * with more features, e.g, 
     * changing into a directory without typing `cd`,
     * programmable command completion, 
     * a history mechanism.
   * zsh is the default shell on macOS.
   * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. 
   * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
-  * The configuration file for zsh is `~/.zshrc`.
 * _brew_ is dubbed the _missing package manager_ for macOS.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
-  * The default configuration file for starship is `~/.config/starship.toml`.
 * _neovim_ is a text editor based on _vim_.
 * _wezterm_ is a cross-platform terminal emulator.
 * _yazi_ is a terminal file manager whose functionality can be extended by installing the following.
