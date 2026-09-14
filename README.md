@@ -4,10 +4,10 @@ Command line tools I cannot live without.
 
 ## Description
 
-I find the following command line tools are indespensible.
+I find the following command line tools indespensible.
 
 * _zsh_ (z-shell) is an immersive Unix command interpreter (shell)
-  * with more features, e.g, 
+  * with many features, e.g, 
     * changing into a directory without typing `cd`,
     * programmable command completion, 
     * a history mechanism.
