@@ -9,6 +9,8 @@ local wezterm = require("wezterm")
 -- A local variable is only accessible within a block or scope.
 local config = wezterm.config_builder()
 
+local act = wezterm.action
+
 -- Apply config choices
 
 -- Choose a Nerd Font and it's size to view icons in the terminal
@@ -19,7 +21,7 @@ config.font_size = 12
 config.enable_tab_bar = false
 
 -- Enable the title bar
-config.window_decorations = "TITLE"
+config.window_decorations = "NONE"
 
 -- Enable window background opacity
 config.window_background_opacity = 0.8
@@ -27,6 +29,8 @@ config.window_background_opacity = 0.8
 -- Set the default width and height for a new wezterm window
 config.initial_cols = 90
 config.initial_rows = 30
+
+-- hide_tab_bar_if_only_one_tab = true
 
 -- Disable the "Are you sure you want to quit/close?" prompt
 config.window_close_confirmation = 'NeverPrompt'
@@ -42,21 +46,38 @@ config.keys = {
   {
     key = 'Tab',
     mods = 'LEADER',
-    action = wezterm.action.SendKey { key = 'Tab' },
+    action = act.SendKey { key = 'Tab' },
   },
   
-  -- LEADER + v to split vertically
+  -- LEADER + v to split horizontally
   {
-    key = 'v',
+    key = '\\',
     mods = 'LEADER',
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
-  -- LEADER + h to split horizontally
+  -- LEADER + h to split vertically
   {
+    key = '-',
+    mods = 'LEADER',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  -- Navigate between panes using Vim-style directions (Leader + h/j/k/l)
+  { 
     key = 'h',
     mods = 'LEADER',
-    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
-  },
+    action = act.ActivatePaneDirection('Left') },
+  { 
+    key = 'j',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection('Down') },
+  { 
+    key = 'k',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection('Up') },
+  { 
+    key = 'l',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection('Right') },
 }
 
 -- return the configuration to wezterm
