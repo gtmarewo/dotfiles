@@ -30,13 +30,21 @@ config.window_background_opacity = 0.8
 config.initial_cols = 90
 config.initial_rows = 30
 
--- hide_tab_bar_if_only_one_tab = true
+hide_tab_bar_if_only_one_tab = true
 
 -- Disable the "Are you sure you want to quit/close?" prompt
 config.window_close_confirmation = 'NeverPrompt'
 
 -- Choose a color scheme
-config.color_scheme = 'Catppuccin Macchiato'
+function scheme_for_appearance(appearance)
+  if appearance:find "Dark" then
+    return "Catppuccin Macchiato"
+  else
+    return "Catppuccin Latte"
+  end
+end
+
+color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 -- Define the leader key as Tab
 config.leader = { key = 'Tab', mods = 'NONE', timeout_milliseconds = 1000 }
@@ -78,7 +86,15 @@ config.keys = {
     key = 'l',
     mods = 'LEADER',
     action = act.ActivatePaneDirection('Right') },
+  -- View and switch workspaces=sessions in tmux
+  { 
+    key = '9',
+    mods = 'ALT',
+    action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
 }
 
--- return the configuration to wezterm
+wezterm.on('update-right-status', function(window, pane)
+  window:set_right_status(window:active_workspace())
+end)
+
 return config

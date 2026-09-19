@@ -4,7 +4,7 @@ vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin"
 
 -- Change the default options and settings
 require("catppuccin").setup({
-  flavour = "auto",       -- latte, freppe, macchiato, mocha
+  flavour = "auto",       -- latte, frappe, macchiato, mocha
   background = {
     light = "latte",      -- in light mode 
     dark  = "macchiato",  -- in dark mode
