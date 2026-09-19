@@ -24,7 +24,7 @@ I find the following command line tools indespensible.
   * _fd_ is a simple, user-friendly alternative to `find`.
   * _bat_ is a `cat` clone with syntax highlighting  and git integration.
   * _eza_ is a mordern replacement for `ls`.
-* _tmux_ is a terminal multiplexer. Beautified tmux.
+* _tmux_ is a terminal multiplexer. 
 * _stow_ is a symlink farm manager.
 * _htop_ is an interactive process viewer.
 * _ncdu_ is an ncurses based disk usage viewer.
