@@ -1,2 +1,2 @@
-require("gerald.core.options")
-require("gerald.plugins.colorscheme")
+require("gerald/core/options")
+require("gerald/plugins/colorscheme")
