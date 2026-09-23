@@ -19,12 +19,6 @@ local cmd = vim.cmd             	                      -- a shortcut for vim.cmd
 
 cmd("let g:netrw_liststyle = 3")	                      -- tree view from the nvim file explorer
 
--- Make backgrounds transparent
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
-
 -- tabs & indentation
 opt.tabstop = 2 		                                    -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 		                                  -- 2 spaces for indent width

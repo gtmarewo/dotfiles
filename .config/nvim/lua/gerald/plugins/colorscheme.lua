@@ -30,3 +30,5 @@ require('lualine').setup({
   }
 })
 
+-- Enable transparency
+Catppuccinopts = { transparent_background = true, float = { transparent = true } }
