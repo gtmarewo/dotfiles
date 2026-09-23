@@ -1,6 +1,6 @@
 require("gerald/core/options")
 require("gerald/plugins/colorscheme")
--- require("gerald/plugins/vim-plug/plugins")
+require("gerald/plugins/vim-plug")
 -- Tell vim-plug where to download your plugins
 -- vim.cmd([[
 --   call plug#begin(stdpath('config') . '/lua/gerald/plugins')
