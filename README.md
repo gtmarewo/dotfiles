@@ -17,6 +17,7 @@ I find the following command line tools indespensible.
 * _brew_ is dubbed the _missing package manager_ for macOS.
 * _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
 * _neovim_ is a text editor based on _vim_.
+  * The transparent.nvim plugin really blows my mind.
 * _wezterm_ is a cross-platform terminal emulator.
 * _yazi_ is a terminal file manager whose functionality can be extended by installing the following.
   * _zoxide_ a smarter `cd` command.
