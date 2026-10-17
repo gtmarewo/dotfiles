@@ -1,0 +1,27 @@
+-- Install blink.cmp here using vimscript instead of lua
+vim.cmd([[
+  call plug#begin(stdpath('config'), 'lua/gerald/plugins')
+    " build blink.cmp from sources
+    Plug 'saghen/blink.cmp', { 'do': 'cargo build --release' }
+
+    " optional: provides snippets for the snippet source
+    Plug 'rafamadriz/friendly-snippets'
+  call plug#end()
+]])
+
+-- Do any further configuration of blink.cmp here
+require('blink.cmp').setup({
+  keymap = { preset = 'default' },
+  appearance = {
+    nerd_font_variant = 'mono'
+  },
+  completion = {
+    documentation = { auto_show = false }
+  },
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+  fuzzy = {
+    implementation = "prefer_rust_with_warning"
+  }
+})

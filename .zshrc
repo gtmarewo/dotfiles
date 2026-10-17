@@ -64,3 +64,6 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
 }
+
+# add the rust toolchain to the path
+. "$HOME/.cargo/env"

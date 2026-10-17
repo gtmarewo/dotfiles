@@ -1,9 +1,9 @@
--- Install Transparent nvim here using Vimscript instead of lua
+-- Install transparent-nvim here using vimscript instead of lua
 vim.cmd([[
   call plug#begin(stdpath('config'), 'lua/gerald/plugins')
      Plug 'tribela/transparent.nvim'
   call plug#end()
 ]])
 
--- Initialize the transparent.nvim plugin
+-- Do any further configuration of transparent.nvim here
 require('transparent').setup({})
