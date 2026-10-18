@@ -1,4 +1,2 @@
-require("gerald/core/options")
-require("gerald/plugins/vim-plug")
-require("gerald/plugins/blink-cmp")
-require("gerald/plugins/colorscheme")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
