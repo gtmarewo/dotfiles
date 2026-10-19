@@ -1,0 +1,4 @@
+# JUnit reports
+**/report.xml
+venv/**
+/.codegraph/daemon.pid

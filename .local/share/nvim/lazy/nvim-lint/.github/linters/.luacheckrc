@@ -1,0 +1,1 @@
+/home/gerald/.local/share/nvim/lazy/nvim-lint/.github/linters/../../.luacheckrc

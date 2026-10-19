@@ -1,0 +1,128 @@
+# dotfiles
+
+Command line tools I cannot live without.
+
+## Description
+
+I find the following command line tools indespensible.
+
+* _zsh_ (z-shell) is an immersive Unix command interpreter (shell)
+  * with many features, e.g, 
+    * changing into a directory without typing `cd`,
+    * programmable command completion, 
+    * a history mechanism.
+  * zsh is the default shell on macOS.
+  * While BASH is the default shell on many Linux distros, zsh usually comes pre-installed. 
+  * zsh can do much more with the help of _plugins_, e.g `zsh-vi-mode` for editing the command line using the powerful text-based tex editor `vim`.
+* _brew_ is dubbed the _missing package manager_ for macOS.
+* _starship_ is a minimal, fast and highly customisable command prompt for any shell such as zsh.
+* _neovim_ is a text editor based on _vim_.
+  * The transparent.nvim plugin really blows my mind.
+* _wezterm_ is a cross-platform terminal emulator.
+* _yazi_ is a terminal file manager whose functionality can be extended by installing the following.
+  * _zoxide_ a smarter `cd` command.
+  * _fzf_ is a command-line fuzzy finder.
+  * _fd_ is a simple, user-friendly alternative to `find`.
+  * _bat_ is a `cat` clone with syntax highlighting  and git integration.
+  * _eza_ is a mordern replacement for `ls`.
+* _tmux_ is a terminal multiplexer. 
+* _stow_ is a symlink farm manager.
+* _htop_ is an interactive process viewer.
+* _ncdu_ is an ncurses based disk usage viewer.
+* _kew_ is dubbed _music for the shell_. This is a command line music
+  player.
+
+## Installation
+
+### zsh
+
+```
+if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
+  [[ -f /usr/bin/zsh ]] || dnf check-update && sudo dnf install zsh
+  chsh -s $(which zsh)
+elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
+  [[ -f /usr/bin/zsh ]] || sudo apt update && sudo apt install zsh
+  chsh -s $(which zsh)
+fi
+# Logout for changes to take effect.
+```
+
+### brew
+
+```
+[[ "$(cat /etc/os-release)" == *"Ubuntu"* ]] && sudo apt update && sudo apt install curl
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### zsh plugins
+
+```
+brew install zsh-autocomplete zsh-autosuggestions zsh-completions zsh-lovers zsh-syntax-highlighting zsh-vi-mode zsh-you-should-use
+```
+
+### starship
+
+```
+brew install starship
+```
+
+### neovim
+```
+brew install neovim
+```
+
+### wezterm (needs a nerd-font) 
+```
+brew install font-caskaydia-mono-nerd-font
+[[ "$OSYPE" == "darwin"* ]] && brew install --cask wezterm
+if [[ "$(cat /etc/os-release)" == *"Fedora"* ]]; then
+  sudo dnf copr enable wezfurlong/wezterm-nightly
+  sudo dnf install wezterm
+elif [[ "$(cat /etc/os-release)" == *"Ubuntu"* ]]; then
+  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | \
+  sudo tee /etc/apt/sources.list.d/wezterm.list
+  sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+  sudo apt update && sudo apt install wezterm
+fi
+```
+
+### yazi (optionally with zoxide, fzf, fd, bat and eza for extra functionality)
+
+```
+brew install yazi zoxide fzf fd bat eza
+```
+
+### tmux
+```
+brew install tmux
+```
+
+### stow
+
+```
+brew install stow
+```
+
+### htop, ncdu anda kew
+```
+brew install htop ncdu kew
+```
+
+## Configuration
+
+```
+export NOW=$(date "+%Y%m%d%H%M")
+[[ -f ~/.zshrc ]] && mv -v ~/.zshrc ~/.zshrc.$NOW
+[[ -f ~/.wezterm.lua ]] && mv -v ~/.wezterm.lua ~/.wezterm.lua.$NOW
+[[ -d ~/.config/starship ]] && mv -v ~/.config/starship ~/.config/starship.$NOW
+[[ -d ~/.config/nvim ]] && mv -v ~/.config/nvim ~/.config/nvim.$NOW
+[[ -d ~/.config/zsh ]] && mv -v ~/.config/zsh ~/.config/zsh.$NOW
+git clone https://github.com/gtmarewo/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow .
+```
+
+## Authors
+
+Gerald Marewo <gtmarewo@gmail.com>
