@@ -1,6 +1,7 @@
-# export MANROFFOPT="-c"
-# export GROFF_NO_SGR=1
-export MANPAGER="less -R --use-color -Ddg -Du+y"
+# a function wrapper that allows man to work with colors via bat
+function m() {
+  command man $1 | bat --language=man --plain
+}
 
 
 
