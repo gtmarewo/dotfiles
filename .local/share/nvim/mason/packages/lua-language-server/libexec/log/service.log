@@ -1,10 +1,10 @@
-[11:19:53.427][info] [#0:/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: Lua Lsp startup, root: 	/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec
-[11:19:53.427][info] [#0:/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: ROOT:	/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec
-[11:19:53.427][info] [#0:/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:73]: LOGPATH:	/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/log
-[11:19:53.427][info] [#0:/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:74]: METAPATH:	/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
-[11:19:53.427][info] [#0:/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:75]: VERSION:	3.18.2-dev
-[11:19:53.491][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
-[11:19:53.492][info] [#0:script/service/service.lua:145]: 
+[07:18:34.163][info] [#0:/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: Lua Lsp startup, root: 	/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec
+[07:18:34.163][info] [#0:/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: ROOT:	/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec
+[07:18:34.163][info] [#0:/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:73]: LOGPATH:	/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/log
+[07:18:34.163][info] [#0:/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:74]: METAPATH:	/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
+[07:18:34.163][info] [#0:/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:75]: VERSION:	3.18.2-dev
+[07:18:34.191][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[07:18:34.191][info] [#0:script/service/service.lua:145]: 
 ========= Medical Examination Report =========
     --------------- Memory ---------------
         Total: 1.927 MB
@@ -26,7 +26,7 @@
         Holdon:   0
         Waiting:  0
 ==============================================
-[11:19:53.503][info] [#0:script/client.lua:657]: Client init	{
+[07:18:34.196][info] [#0:script/client.lua:657]: Client init	{
   capabilities = {
     general = {
       positionEncodings = { "utf-8", "utf-16", "utf-32" }
@@ -273,7 +273,7 @@
     name = "Neovim",
     version = "0.12.5"
   },
-  processId = 55453,
+  processId = 17891,
   rootPath = "/home/gerald/dotfiles/.config/nvim",
   rootUri = "file:///home/gerald/dotfiles/.config/nvim",
   trace = "off",
@@ -283,7 +283,7 @@
       uri = "file:///home/gerald/dotfiles/.config/nvim"
     } }
 }
-[11:19:53.503][info] [#0:script/language.lua:137]: VSC language: nil
-[11:19:53.504][info] [#0:script/language.lua:138]: LS  language: en-us
-[11:19:53.504][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/gerald/dotfiles/.config/nvim
-[11:19:53.504][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/gerald/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_home_gerald_dotfiles_.config_nvim.log
+[07:18:34.197][info] [#0:script/language.lua:137]: VSC language: nil
+[07:18:34.197][info] [#0:script/language.lua:138]: LS  language: en-us
+[07:18:34.197][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/gerald/dotfiles/.config/nvim
+[07:18:34.197][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/gerald/dotfiles/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_home_gerald_dotfiles_.config_nvim.log
