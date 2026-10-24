@@ -39,11 +39,11 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"
 
-# aliases
-[[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
-
 # coloured man pages
 [[ -f "$HOME/.config/zsh/coloured_man_pages.zsh" ]] && source "$HOME/.config/zsh/coloured_man_pages.zsh"
+
+# aliases
+[[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
 
 # deal.II
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then

@@ -2228,7 +2228,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/clice-io/clice@v0.1.2026082603",
+      "id": "pkg:github/clice-io/clice@v0.1.2026101507",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -2252,12 +2252,12 @@
         },
         {
           "target": "win_arm64",
-          "file": "clice-{{ version | strip_prefix \"v\" }}.aarch64-pc-windows-msvc.zip",
+          "file": "clice-{{ version | strip_prefix \"v\" }}.aarch64-w64-mingw32.zip",
           "bin": "clice/bin/clice.exe"
         },
         {
           "target": "win_x64",
-          "file": "clice-{{ version | strip_prefix \"v\" }}.x86_64-pc-windows-msvc.zip",
+          "file": "clice-{{ version | strip_prefix \"v\" }}.x86_64-w64-mingw32.zip",
           "bin": "clice/bin/clice.exe"
         }
       ]
@@ -3180,7 +3180,7 @@
     "languages": [],
     "categories": [],
     "source": {
-      "id": "pkg:npm/cronstrue@3.36.0"
+      "id": "pkg:npm/cronstrue@3.37.0"
     },
     "bin": {
       "cronstrue": "npm:cronstrue"
@@ -4163,7 +4163,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/djlint@1.46.6"
+      "id": "pkg:pypi/djlint@1.47.0"
     },
     "bin": {
       "djlint": "pypi:djlint"
@@ -4450,7 +4450,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/dprint/dprint@0.64.1",
+      "id": "pkg:github/dprint/dprint@0.64.3",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -5556,7 +5556,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/elixir-lang/expert@v0.2.0",
+      "id": "pkg:github/elixir-lang/expert@v0.2.1",
       "asset": [
         {
           "target": "darwin_x64",
@@ -5880,7 +5880,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/PlasmaFAIR/fortitude@v0.9.2",
+      "id": "pkg:github/PlasmaFAIR/fortitude@v0.10.0",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -7090,7 +7090,7 @@
   {
     "name": "golines",
     "description": "A golang formatter that fixes long lines.",
-    "homepage": "https://github.com/segmentio/golines",
+    "homepage": "https://github.com/golangci/golines",
     "licenses": [
       "MIT"
     ],
@@ -7801,7 +7801,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/@herb-tools/language-server@0.11.0"
+      "id": "pkg:npm/@herb-tools/language-server@0.11.1"
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/marcoroth/herb/v{{version}}/javascript/packages/vscode/package.json"
@@ -8319,7 +8319,7 @@
       "DAP"
     ],
     "source": {
-      "id": "pkg:openvsx/vscjava/vscode-java-test@0.46.0",
+      "id": "pkg:openvsx/vscjava/vscode-java-test@0.47.0",
       "download": {
         "file": "vscjava.vscode-java-test-{{version}}.vsix",
         "plugin_version": "0.43.1"
@@ -8380,7 +8380,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:generic/eclipse/eclipse.jdt.ls@v1.62.0",
+      "id": "pkg:generic/eclipse/eclipse.jdt.ls@v1.63.0",
       "download": [
         {
           "target": [
@@ -8388,7 +8388,7 @@
             "darwin_arm64"
           ],
           "files": {
-            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610131109.tar.gz",
+            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610191322.tar.gz",
             "lombok.jar": "https://projectlombok.org/downloads/lombok.jar"
           },
           "config": "config_mac/"
@@ -8396,7 +8396,7 @@
         {
           "target": "linux",
           "files": {
-            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610131109.tar.gz",
+            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610191322.tar.gz",
             "lombok.jar": "https://projectlombok.org/downloads/lombok.jar"
           },
           "config": "config_linux/"
@@ -8404,7 +8404,7 @@
         {
           "target": "win",
           "files": {
-            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610131109.tar.gz",
+            "jdtls.tar.gz": "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-{{ version | strip_prefix \"v\" }}-202610191322.tar.gz",
             "lombok.jar": "https://projectlombok.org/downloads/lombok.jar"
           },
           "config": "config_win/"
@@ -8778,7 +8778,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:pypi/json-repair@0.64.1"
+      "id": "pkg:pypi/json-repair@0.64.2"
     },
     "bin": {
       "json_repair": "pypi:json_repair"
@@ -10210,17 +10210,48 @@
           "bin": "exec:libexec/bin/lua-language-server"
         },
         {
-          "target": "linux_x64_musl",
-          "file": "lua-language-server-{{version}}-linux-x64-musl.tar.gz:libexec/",
-          "bin": "exec:libexec/bin/lua-language-server"
-        },
-        {
           "target": "win_x64",
           "file": "lua-language-server-{{version}}-win32-x64.zip",
           "bin": "bin/lua-language-server.exe"
         }
       ],
       "version_overrides": [
+        {
+          "constraint": "semver:<=3.15.0",
+          "id": "pkg:github/LuaLS/lua-language-server@3.19.2",
+          "asset": [
+            {
+              "target": "darwin_arm64",
+              "file": "lua-language-server-{{version}}-darwin-arm64.tar.gz:libexec/",
+              "bin": "exec:libexec/bin/lua-language-server"
+            },
+            {
+              "target": "darwin_x64",
+              "file": "lua-language-server-{{version}}-darwin-x64.tar.gz:libexec/",
+              "bin": "exec:libexec/bin/lua-language-server"
+            },
+            {
+              "target": "linux_arm64_gnu",
+              "file": "lua-language-server-{{version}}-linux-arm64.tar.gz:libexec/",
+              "bin": "exec:libexec/bin/lua-language-server"
+            },
+            {
+              "target": "linux_x64_gnu",
+              "file": "lua-language-server-{{version}}-linux-x64.tar.gz:libexec/",
+              "bin": "exec:libexec/bin/lua-language-server"
+            },
+            {
+              "target": "linux_x64_musl",
+              "file": "lua-language-server-{{version}}-linux-x64-musl.tar.gz:libexec/",
+              "bin": "exec:libexec/bin/lua-language-server"
+            },
+            {
+              "target": "win_x64",
+              "file": "lua-language-server-{{version}}-win32-x64.zip",
+              "bin": "bin/lua-language-server.exe"
+            }
+          ]
+        },
         {
           "constraint": "semver:<=3.8.3",
           "id": "pkg:github/LuaLS/lua-language-server@3.8.3",
@@ -10857,10 +10888,11 @@
       "id": "pkg:github/razziel89/mdslw@0.18.0",
       "asset": [
         {
-          "target": [
-            "darwin_arm64",
-            "darwin_x64"
-          ],
+          "target": "darwin_arm64",
+          "file": "mdslw_aarch64-apple-darwin"
+        },
+        {
+          "target": "darwin_x64",
           "file": "mdslw_x86_64-apple-darwin"
         },
         {
@@ -14113,7 +14145,7 @@
       "Runtime"
     ],
     "source": {
-      "id": "pkg:pypi/pymobiledevice3@11.42.0"
+      "id": "pkg:pypi/pymobiledevice3@11.43.1"
     },
     "bin": {
       "pymobiledevice3": "pypi:pymobiledevice3"
@@ -15115,7 +15147,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/rubocop@1.92.0"
+      "id": "pkg:gem/rubocop@1.92.1"
     },
     "bin": {
       "rubocop": "gem:rubocop"
@@ -15230,7 +15262,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/astral-sh/ruff@0.17.1",
+      "id": "pkg:github/astral-sh/ruff@0.17.2",
       "asset": [
         {
           "target": "darwin_x64",
@@ -16702,7 +16734,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/ethereum/solidity@v0.8.37",
+      "id": "pkg:github/ethereum/solidity@v0.8.38",
       "asset": [
         {
           "target": [
@@ -16816,7 +16848,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.6.13584",
+      "id": "pkg:gem/sorbet@0.6.13590",
       "supported_platforms": [
         "unix"
       ]
@@ -16874,7 +16906,7 @@
     "source": {
       "id": "pkg:github/stoplightio/vscode-spectral@v1.1.4",
       "build": {
-        "run": "npm exec yarn@1 install\nnpm exec --package=yarn@1 'node make package'\n"
+        "run": "npm exec yarn@1 install\nnpm exec --package=yarn@1 -c 'node make package'\n"
       }
     },
     "schemas": {
@@ -17083,7 +17115,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/quarylabs/sqruff@v0.42.0",
+      "id": "pkg:github/quarylabs/sqruff@v0.43.0",
       "asset": [
         {
           "target": "linux_x64",
@@ -17490,6 +17522,38 @@
     }
   },
   {
+    "name": "stylish-haskell",
+    "description": "Haskell code prettifier.",
+    "homepage": "https://github.com/haskell/stylish-haskell",
+    "licenses": [
+      "BSD-3-Clause"
+    ],
+    "languages": [
+      "Haskell"
+    ],
+    "categories": [
+      "Formatter"
+    ],
+    "source": {
+      "id": "pkg:github/haskell/stylish-haskell@v0.15.1.0",
+      "asset": [
+        {
+          "target": "darwin_arm64",
+          "file": "stylish-haskell-{{version}}-darwin-arm64.zip",
+          "bin": "stylish-haskell-{{version}}-darwin-arm64/stylish-haskell"
+        },
+        {
+          "target": "linux_x64",
+          "file": "stylish-haskell-{{version}}-linux-x86_64.tar.gz",
+          "bin": "stylish-haskell-{{version}}-linux-x86_64/stylish-haskell"
+        }
+      ]
+    },
+    "bin": {
+      "stylish-haskell": "{{source.asset.bin}}"
+    }
+  },
+  {
     "name": "stylua",
     "description": "An opinionated Lua code formatter.",
     "homepage": "https://github.com/JohnnyMorganz/StyLua",
@@ -17767,7 +17831,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/nicklockwood/SwiftFormat@0.64.0",
+      "id": "pkg:github/nicklockwood/SwiftFormat@0.64.1",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -18655,7 +18719,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/terraform-linters/tflint@v0.64.0",
+      "id": "pkg:github/terraform-linters/tflint@v0.65.0",
       "asset": [
         {
           "target": "darwin_x64",
@@ -19027,7 +19091,7 @@
       "lspconfig": "tombi"
     },
     "source": {
-      "id": "pkg:github/tombi-toml/tombi@v1.8.10",
+      "id": "pkg:github/tombi-toml/tombi@v1.9.0",
       "asset": [
         {
           "target": "darwin_x64",
@@ -19256,7 +19320,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/trufflesecurity/trufflehog@v3.99.3",
+      "id": "pkg:github/trufflesecurity/trufflehog@v3.99.4",
       "asset": [
         {
           "target": "darwin_x64",
@@ -19547,7 +19611,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:pypi/ty@0.0.90"
+      "id": "pkg:pypi/ty@0.0.91"
     },
     "bin": {
       "ty": "pypi:ty"
@@ -19925,7 +19989,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/daveshanley/vacuum@v0.33.2",
+      "id": "pkg:github/daveshanley/vacuum@v0.35.0",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -20079,7 +20143,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/errata-ai/vale@v3.24.0",
+      "id": "pkg:github/errata-ai/vale@v3.25.1",
       "asset": [
         {
           "target": "darwin_x64",

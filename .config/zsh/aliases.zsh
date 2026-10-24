@@ -30,6 +30,7 @@ fi
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias man=m
 
 # OS specific aliases
 
