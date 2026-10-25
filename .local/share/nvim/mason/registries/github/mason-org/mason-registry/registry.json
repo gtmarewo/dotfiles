@@ -817,7 +817,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40astrojs/language-server@2.17.2",
+      "id": "pkg:npm/%40astrojs/language-server@2.17.3",
       "extra_packages": [
         "typescript@6.0.3",
         "@astrojs/ts-plugin"
@@ -1307,7 +1307,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:npm/@biomejs/biome@2.5.15"
+      "id": "pkg:npm/@biomejs/biome@2.6.2"
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/biomejs/biome-vscode/main/package.json"
@@ -2906,7 +2906,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40github/copilot-language-server@1.556.0"
+      "id": "pkg:npm/%40github/copilot-language-server@1.557.0"
     },
     "bin": {
       "copilot-language-server": "npm:copilot-language-server"
@@ -3180,7 +3180,7 @@
     "languages": [],
     "categories": [],
     "source": {
-      "id": "pkg:npm/cronstrue@3.37.0"
+      "id": "pkg:npm/cronstrue@3.38.0"
     },
     "bin": {
       "cronstrue": "npm:cronstrue"
@@ -3924,6 +3924,30 @@
     }
   },
   {
+    "name": "devsense-php-ls",
+    "description": "Devsense PHP Language Server",
+    "homepage": "https://docs.devsense.com/other/lsp/docs/",
+    "licenses": [
+      "ISC",
+      "MIT"
+    ],
+    "languages": [
+      "PHP"
+    ],
+    "categories": [
+      "LSP"
+    ],
+    "source": {
+      "id": "pkg:npm/devsense-php-ls@1.0.19449"
+    },
+    "bin": {
+      "devsense-php-ls": "npm:devsense-php-ls"
+    },
+    "neovim": {
+      "lspconfig": "phptools"
+    }
+  },
+  {
     "name": "dexter",
     "description": "A fast, full-featured Elixir LSP optimized for large codebases.",
     "homepage": "https://github.com/remoteoss/dexter",
@@ -4601,7 +4625,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:composer/symplify/easy-coding-standard@13.3.8"
+      "id": "pkg:composer/symplify/easy-coding-standard@13.3.9"
     },
     "bin": {
       "ecs": "composer:ecs"
@@ -5556,7 +5580,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/elixir-lang/expert@v0.2.1",
+      "id": "pkg:github/elixir-lang/expert@v0.2.2",
       "asset": [
         {
           "target": "darwin_x64",
@@ -6196,7 +6220,7 @@
     "languages": [],
     "categories": [],
     "source": {
-      "id": "pkg:github/cli/cli@v2.103.0",
+      "id": "pkg:github/cli/cli@v2.103.2",
       "asset": [
         {
           "target": "darwin_x64",
@@ -9375,47 +9399,47 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:generic/Kotlin/kotlin-lsp@kotlin-lsp/v263.6379.0",
+      "id": "pkg:generic/Kotlin/kotlin-lsp@kotlin-lsp/v263.7084.0",
       "download": [
         {
           "target": "darwin_x64",
           "files": {
-            "kotlin-lsp.zip": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.sit"
+            "kotlin-lsp.zip": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.sit"
           },
           "bin": "kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}/bin/intellij-server"
         },
         {
           "target": "darwin_arm64",
           "files": {
-            "kotlin-lsp.zip": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.sit"
+            "kotlin-lsp.zip": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.sit"
           },
           "bin": "kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}/bin/intellij-server"
         },
         {
           "target": "linux_x64",
           "files": {
-            "kotlin-lsp.tar.gz": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.tar.gz"
+            "kotlin-lsp.tar.gz": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.tar.gz"
           },
           "bin": "kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}/bin/intellij-server"
         },
         {
           "target": "linux_arm64",
           "files": {
-            "kotlin-lsp.tar.gz": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.tar.gz"
+            "kotlin-lsp.tar.gz": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.tar.gz"
           },
-          "bin": "kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}/bin/intellij-server"
+          "bin": "kotlin-server-{{{ version | strip_prefix \"kotlin-lsp/v\" }}/bin/intellij-server"
         },
         {
           "target": "win_x64",
           "files": {
-            "kotlin-lsp.zip": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.win.zip"
+            "kotlin-lsp.zip": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}.win.zip"
           },
           "bin": "bin/intellij-server.exe"
         },
         {
           "target": "win_arm64",
           "files": {
-            "kotlin-lsp.zip": "https://download-cdn.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.win.zip"
+            "kotlin-lsp.zip": "https://download.jetbrains.com/language-server/kotlin-server/{{ version | strip_prefix \"kotlin-lsp/v\" }}/kotlin-server-{{ version | strip_prefix \"kotlin-lsp/v\" }}-aarch64.win.zip"
           },
           "bin": "bin/intellij-server.exe"
         }
@@ -10652,7 +10676,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:npm/markdownlint-cli2@0.23.3"
+      "id": "pkg:npm/markdownlint-cli2@0.24.0"
     },
     "bin": {
       "markdownlint-cli2": "npm:markdownlint-cli2"
@@ -10778,7 +10802,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/markuplint@5.2.0"
+      "id": "pkg:npm/markuplint@5.3.0"
     },
     "bin": {
       "markuplint": "npm:markuplint"
@@ -12319,7 +12343,7 @@
       "Runtime"
     ],
     "source": {
-      "id": "pkg:github/open-policy-agent/opa@v1.21.3",
+      "id": "pkg:github/open-policy-agent/opa@v1.21.4",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -16522,7 +16546,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/snyk/cli@v1.1308.2",
+      "id": "pkg:github/snyk/cli@v1.1308.3",
       "asset": [
         {
           "target": "darwin_x64",
@@ -16848,7 +16872,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.6.13590",
+      "id": "pkg:gem/sorbet@0.6.13591",
       "supported_platforms": [
         "unix"
       ]
@@ -17212,7 +17236,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/stan-language-server-bin@0.5.1"
+      "id": "pkg:npm/stan-language-server-bin@0.6.0"
     },
     "bin": {
       "stan-language-server": "npm:stan-language-server"
@@ -19091,7 +19115,7 @@
       "lspconfig": "tombi"
     },
     "source": {
-      "id": "pkg:github/tombi-toml/tombi@v1.9.0",
+      "id": "pkg:github/tombi-toml/tombi@v1.9.1",
       "asset": [
         {
           "target": "darwin_x64",
@@ -19320,7 +19344,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/trufflesecurity/trufflehog@v3.99.4",
+      "id": "pkg:github/trufflesecurity/trufflehog@v3.99.6",
       "asset": [
         {
           "target": "darwin_x64",
@@ -19989,7 +20013,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/daveshanley/vacuum@v0.35.0",
+      "id": "pkg:github/daveshanley/vacuum@v0.35.1",
       "asset": [
         {
           "target": "darwin_arm64",
