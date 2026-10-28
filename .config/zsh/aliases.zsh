@@ -8,7 +8,7 @@ alias pl='git pull'
 alias ph='git push'
 alias bc='git branch'
 
-alias bat='bat --color=always'
+alias bat='bat --color=always --plain'
 alias cat='bat'
 
 if [[ "$(which brew)" == *"brew" ]]; then
@@ -25,7 +25,7 @@ if [[ -f "$(which fzf)" && -f "$(which nvim)" ]]; then
   alias invim="fzf -m --preview='bat --color=always {}' | xargs nvim"
 fi
 
-[[ -f "$(which bat)" ]] && alias bat='bat --color=always'
+[[ -f "$(which bat)" ]] && alias bat='bat --color=always --plain'
 
 alias ..='cd ..'
 alias ...='cd ../..'
