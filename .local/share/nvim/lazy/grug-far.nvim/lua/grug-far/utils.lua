@@ -238,6 +238,58 @@ function M.overwriteFileAsync(path, data, callback)
   end)
 end
 
+---@param path string
+---@param callback fun(err: string|nil, eol: "\r\n"|"\n"|nil)
+function M.detect_file_eol(path, callback)
+  uv.fs_open(path, 'r', 438, function(err, fd)
+    if err then
+      callback(err, nil)
+      return
+    end
+    if not fd then
+      return callback('could not open file ' .. path)
+    end
+
+    local offset = 0
+    local previous_byte
+
+    local function finish(read_err, format)
+      uv.fs_close(fd, function(close_err)
+        callback(read_err or close_err, format)
+      end)
+    end
+
+    local function read_next()
+      uv.fs_read(fd, 4096, offset, function(read_err, data)
+        if read_err then
+          finish(read_err, nil)
+          return
+        end
+
+        data = data or ''
+        local newline = data:find('\n', 1, true)
+
+        if newline then
+          local before = newline > 1 and data:sub(newline - 1, newline - 1) or previous_byte
+          finish(nil, before == '\r' and '\r\n' or '\n')
+          return
+        end
+
+        if #data == 0 then
+          finish(nil, nil) -- no newline found
+          return
+        end
+
+        previous_byte = data:sub(-1)
+        offset = offset + #data
+        read_next()
+      end)
+    end
+
+    read_next()
+  end)
+end
+
 --- add a keymapping
 ---@param buf integer
 ---@param desc string
@@ -780,6 +832,9 @@ function M.parse_buf_range_str(str)
     end_col = -1
   end
 
+  local fileformat = vim.api.nvim_get_option_value('fileformat', { buf = buf })
+  local eol = fileformat == 'dos' and '\r\n' or '\n'
+
   local bufrange = {
     file_name = file_name,
     lines = {},
@@ -787,6 +842,7 @@ function M.parse_buf_range_str(str)
     start_row = start_row,
     end_col = end_col,
     end_row = end_row,
+    eol = eol,
   } --[[@as grug.far.VisualSelectionInfo]]
   bufrange.lines = M.readFromBufrange(bufrange)
 
@@ -855,12 +911,13 @@ function M.detect_eol(contents)
   end
 end
 
-M.eol = M.is_win and '\r\n' or '\n'
-
 --- strips trailing newline from str if it's there
 ---@param str string
 ---@return string
 function M.strip_trailing_newline(str)
+  if vim.endswith(str, '\r\n') then
+    return str:sub(1, -3)
+  end
   if vim.endswith(str, '\n') then
     return str:sub(1, -2)
   end

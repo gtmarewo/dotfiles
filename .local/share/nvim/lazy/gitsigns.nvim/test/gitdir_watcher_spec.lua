@@ -137,7 +137,7 @@ describe('gitdir_watcher', function()
       'attach.attach(1): Attaching (trigger=BufReadPost)',
       np(revparse_pat),
       np('system.system: git .* config user.name'),
-      np('system.system: git .* ls%-files .* ' .. path_pattern(test_file)),
+      np('system.system: git .* ls%-files .* ' .. vim.pesc(vim.fs.basename(test_file))),
       np('attach%.attach%(1%): Watching git dir .*'),
       np('system.system: git .* show .*'),
     })
@@ -152,7 +152,7 @@ describe('gitdir_watcher', function()
     match_dag({
       p('system.system: git .* diff %-%-name%-status .* %-%-cached'),
       p('attach.handle_moved%(1%): File moved to dummy%.txt2'),
-      p('system.system: git .* ls%-files .* ' .. path_pattern(test_file2) .. '$'),
+      p('system.system: git .* ls%-files .* ' .. vim.pesc(vim.fs.basename(test_file2)) .. '$'),
       p(
         'attach%.handle_moved%(1%): Renamed buffer 1 from '
           .. path_pattern(test_file)
@@ -173,7 +173,7 @@ describe('gitdir_watcher', function()
     match_dag({
       p('system.system: git .* diff %-%-name%-status .* %-%-cached'),
       p('attach.handle_moved%(1%): File moved to dummy%.txt3'),
-      p('system.system: git .* ls%-files .* ' .. path_pattern(test_file3) .. '$'),
+      p('system.system: git .* ls%-files .* ' .. vim.pesc(vim.fs.basename(test_file3)) .. '$'),
       p(
         'attach%.handle_moved%(1%): Renamed buffer 1 from '
           .. path_pattern(test_file2)
@@ -192,7 +192,7 @@ describe('gitdir_watcher', function()
     match_dag({
       p('system.system: git .* diff %-%-name%-status .* %-%-cached'),
       p('attach.handle_moved%(1%): Moved file reset'),
-      p('system.system: git .* ls%-files .* ' .. path_pattern(test_file) .. '$'),
+      p('system.system: git .* ls%-files .* ' .. vim.pesc(vim.fs.basename(test_file)) .. '$'),
       p(
         'attach%.handle_moved%(1%): Renamed buffer 1 from '
           .. path_pattern(test_file3)
@@ -379,6 +379,53 @@ describe('gitdir_watcher', function()
     helpers.check({ status = { head = '', added = 0, changed = 0, removed = 0 }, signs = {} })
   end)
 
+  for _, case in ipairs({
+    { name = 'detects index creation', with_index = false, poll_error = false },
+    { name = 'detects index creation after a poll error', with_index = false, poll_error = true },
+    { name = 'detects index changes after a poll error', with_index = true, poll_error = true },
+  }) do
+    it(case.name, function()
+      setup_test_repo({ no_add = not case.with_index })
+      helpers.setup_path()
+      install_failing_fs_watchers(true)
+
+      local notified = helpers.exec_lua(function(dir, poll_error)
+        require('gitsigns.config').build({ _allow_fs_poll_fallback = true })
+        local watcher = require('gitsigns.git.repo.watcher').new(dir .. '/.git')
+        local updates = 0
+        watcher:on_update(function()
+          updates = updates + 1
+        end)
+        -- Consume the initial fallback notification before changing the index.
+        assert(vim.wait(2000, function()
+          return updates == 1
+        end))
+
+        vim.fn.writefile({ 'changed' }, dir .. '/dummy.txt')
+        vim.fn.system({ 'git', '-C', dir, 'add', '--', 'dummy.txt' })
+        assert(vim.v.shell_error == 0)
+
+        local path = dir .. '/.git/HEAD'
+        local old = assert(watcher.handles[path])
+        if poll_error then
+          old._cb('ENOENT', nil, nil)
+          local replacement = assert(watcher.handles[path])
+          assert(replacement ~= old and old:is_closing())
+        else
+          old._cb(nil, nil, nil)
+        end
+
+        local changed = vim.wait(1000, function()
+          return updates == 2
+        end)
+        watcher:close()
+        return changed
+      end, helpers.scratch, case.poll_error)
+
+      eq(true, notified)
+    end)
+  end
+
   it('closes and recreates watchers when buffers detach and reattach', function()
     setup_test_repo()
     setup_gitsigns(watcher_test_config)
@@ -524,6 +571,12 @@ describe('gitdir_watcher', function()
       --- @diagnostic disable-next-line: unused, assign-type-mismatch
       --- assign to nil to allow gc
       watcher, repo = nil, nil
+
+      -- Compiled async callbacks can retain completed tasks and their repo result.
+      -- Drop those references before checking the repo's own GC behavior.
+      if jit then
+        jit.flush()
+      end
 
       vim.wait(2000, function()
         collectgarbage('collect')
