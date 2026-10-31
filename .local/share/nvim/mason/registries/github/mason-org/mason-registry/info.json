@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":"2026-10-31-helpful-ocean","download_timestamp":1793428922,"checksums":{"registry.json":"838431e8655084e359f37eee1461ebfc2e11362e087b394de58c3916e40f111e","registry.json.zip":"9c705750165fe9b7933b3f10571792f6e91a42a12c4c86fb9f76dab3f061c69b"}}
+=======
+{"checksums":{"registry.json.zip":"9c705750165fe9b7933b3f10571792f6e91a42a12c4c86fb9f76dab3f061c69b","registry.json":"838431e8655084e359f37eee1461ebfc2e11362e087b394de58c3916e40f111e"},"version":"2026-10-31-helpful-ocean","download_timestamp":1793429583}
+>>>>>>> c28267f510ba378323f8f33568b3c606ff42ec8a
