@@ -65,5 +65,10 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+# a shell wrapper function for cheat.sh
+function cht.sh() {
+  command curl $0/$1
+}
+
 # add the rust toolchain to the path
 . "$HOME/.cargo/env"

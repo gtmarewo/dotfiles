@@ -31,6 +31,8 @@ I find the following command line tools indespensible.
 * _ncdu_ is an ncurses based disk usage viewer.
 * _kew_ is dubbed _music for the shell_. This is a command line music
   player.
+* ripgrep (rg) is a command-line tool that recursively searches for regular expressions or literal text patterns.
+* fastfetch is a system information tool.
 
 ## Installation
 
