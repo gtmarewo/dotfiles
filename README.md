@@ -28,6 +28,7 @@ I find the following command line tools indespensible.
 * _tmux_ is a terminal multiplexer. 
 * _stow_ is a symlink farm manager.
 * _htop_ is an interactive process viewer.
+* _btop_ is a fast, interactive, and visually polished command-line resource monitor.
 * _ncdu_ is an ncurses based disk usage viewer.
 * _kew_ is dubbed _music for the shell_. This is a command line music
   player.
@@ -106,9 +107,9 @@ brew install tmux
 brew install stow
 ```
 
-### htop, ncdu anda kew
+### htop, ncdu kew and btop
 ```
-brew install htop ncdu kew
+brew install htop ncdu kew btop
 ```
 
 ## Configuration
@@ -120,6 +121,7 @@ export NOW=$(date "+%Y%m%d%H%M")
 [[ -d ~/.config/starship ]] && mv -v ~/.config/starship ~/.config/starship.$NOW
 [[ -d ~/.config/nvim ]] && mv -v ~/.config/nvim ~/.config/nvim.$NOW
 [[ -d ~/.config/zsh ]] && mv -v ~/.config/zsh ~/.config/zsh.$NOW
+[[ -d ~/.config/btop ]] && mv -v ~/.config/btop ~/.config/btop.$NOW
 git clone https://github.com/gtmarewo/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow .

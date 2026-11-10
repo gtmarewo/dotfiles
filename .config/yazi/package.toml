@@ -1,5 +1,7 @@
-[plugin]
-deps = []
+[[plugin.deps]]
+use = "Shallow-Seek/djvu-view"
+rev = "f218aa6"
+hash = "522db0412d7839c8c343f9c733713d24"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
