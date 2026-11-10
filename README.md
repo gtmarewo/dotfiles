@@ -28,6 +28,7 @@ I find the following command line tools indespensible.
 * _tmux_ is a terminal multiplexer. 
 * _stow_ is a symlink farm manager.
 * _htop_ is an interactive process viewer.
+* _btop_ is a fast, interactive, and visually polished command-line resource monitor.
 * _ncdu_ is an ncurses based disk usage viewer.
 * _kew_ is dubbed _music for the shell_. This is a command line music
   player.
